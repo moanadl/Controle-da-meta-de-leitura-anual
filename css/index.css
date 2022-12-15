@@ -1,0 +1,306 @@
+/* ----- Colors ----- */
+
+/* --baby-powder: hsl(105, 20%, 96%);
+--viridian-green: hsl(176, 54%, 40%);
+--sapphire-blue: hsl(202, 93%, 30%);
+--deep-saffron: hsl(28, 100%, 63%);
+--eerie-black: hsl(0, 0%, 8%); 
+  background-color: hsl(248, 89%, 93%);*/
+
+
+/* ----- Fonts ----- */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+/* font-family: 'Lato', sans-serif */
+
+
+/* ----- Reseting default styles ----- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ---------- Global ---------- */
+
+body {
+    color: hsl(0, 0%, 8%);
+    font-family: 'Lato', sans-serif;
+    background-color: hsl(248, 89%, 93%);
+}
+  
+a {
+    font-weight: 700;
+    text-decoration: none;
+}
+  
+  
+/* ---------- Header ---------- */
+
+.home-title, 
+.menu-item, 
+.menu-short-icon, 
+.menu-short-item {
+    color: hsl(105, 20%, 96%);
+}
+
+.menu {
+    display: flex;
+        align-items: center;
+        justify-content: space-between;
+    border-bottom: ridge 5px hsl(176, 54%, 40%);
+    margin-bottom: 40px;
+    height: 70px;
+    background-color: hsl(202, 93%, 30%);
+}
+
+.home {
+    display: flex;
+        align-items: center;
+        gap: 30px;
+    margin-left: 30px;
+}
+
+.home-img-link {
+    display: flex;
+}
+
+.home-img {
+    width: 44px;
+    border-radius: 50%;
+}
+
+.home-title {
+    font-size: 26px;
+}
+
+.menu-options {
+    display: flex;
+}
+
+.menu-item, 
+.menu-short-icon, 
+.menu-short-item  {
+    font-size: 17px;
+}
+
+.menu-item  {
+    padding: 23px 15px;
+}
+
+.menu-short-item  {
+    padding: 15px;
+}
+
+.menu-short-icon  {
+    padding: 23px;
+}
+
+.menu-item:hover, 
+.menu-short-icon:hover, 
+.menu-short-item:hover {
+    background-color: hsl(176, 54%, 40%);
+}
+
+.menu-short-icon {
+    display: none;
+}
+
+.menu-short-options {
+    position: absolute;
+        top: 66px;
+        right: 0px;
+    display: flex;
+        flex-direction: column;
+    width: 130px;
+    background-color: hsl(202, 93%, 30%);
+    border: 2px solid hsl(176, 54%, 40%);
+}
+
+.menu-short-show {
+    display: none;
+}
+
+
+/* ---------- Main ---------- */
+
+.content {
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6vw;
+    margin: 3% 5%;
+}
+
+.welcome-message {
+    margin-top: 15px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.content-description {
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.content-description-item {
+    margin-top: 7px;
+    font-size: 15px;
+}
+
+.image-book {
+    border-radius: 75px;
+    width: 33%;
+}
+
+
+/* ---------- Footer ---------- */
+
+.contact {
+    position: fixed;
+        bottom: 35px;
+        left: 25%;
+    width: 50%;
+    text-align: center;
+    border-top: solid 1px hsl(0, 0%, 8%);
+}
+
+.contact-intro {
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.contact-link {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 14px;
+    color: hsl(0, 0%, 8%);
+}
+
+
+/* ---------- Responsiveness ---------- */
+
+@media (max-width: 900px) {
+
+    .image-book {
+        display: none;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .menu-item {
+        display: none;
+    }
+
+    .menu-short-icon {
+        display: block;
+        font-size: 18px;
+    }
+
+    .menu-short-item {
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .menu {
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .home {
+        gap: 10px;
+        margin-left: 20px;
+    }
+
+    .home-img {
+        width: 40px;
+    }
+
+    .home-title {
+        font-size: 23px;
+    }
+
+    .menu-short-icon i {
+        position: absolute;
+        right: 25px;
+    }
+    
+    .menu-short-options {
+        top: 55px;
+        right: 0px;
+    }
+
+    .content {
+        margin-top: 3vh;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+
+    .contact {
+        width: 80%;
+        margin: auto;
+        right: 0;
+        left: 0;
+    }
+
+}
+
+@media (max-width: 350px) {
+
+    .home {
+        margin-left: 0;
+    }
+
+    .home-img {
+        display: none;
+    }
+
+    .home-title {
+        font-size: 21px;
+    }
+
+}
+
+@media (max-width: 280px) {
+
+    .welcome-message, .content-description-item, .contact-intro, .contact-link {
+        font-size: 13px;
+    }
+
+    .contact-link {
+        margin-left: 9px;
+        margin-right: 9px;
+    }
+
+}
+
+@media (max-height: 550px) {
+
+    .contact {
+        position: static; /* Notar que o position do footer no main é diferente do resto */
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+    }
+
+    .contact-link {
+        font-size: 13px;
+    }
+
+    .contact-intro {
+        display: none;
+    }
+
+    .contact.nav {
+        margin-top: 10px;
+    }
+
+}
