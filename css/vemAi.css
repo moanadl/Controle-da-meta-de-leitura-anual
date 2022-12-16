@@ -1,11 +1,14 @@
 /* ----- Colors ----- */
 
-/* --baby-powder: hsl(105, 20%, 96%);
---viridian-green: hsl(176, 54%, 40%);
---sapphire-blue: hsl(202, 93%, 30%);
---deep-saffron: hsl(28, 100%, 63%);
---eerie-black: hsl(0, 0%, 8%); 
-  background-color: hsl(248, 89%, 93%);*/
+/*  
+    Background body (branco talco): hsl(248, 100%, 97%);
+    Background header, color links texto, color hover "Saiba mais!" (azul escuro): hsl(202, 93%, 22%);
+    Background índice livros (laranja claro): hsl(28, 100%, 63%);
+    Barra de progresso (verde limão): hsl(120, 76%, 53%);
+    Color header, color "Saiba mais!", background hover "Saiba mais!" (branco): hsl(0, 0%, 100%);
+    Color texto, índice e porcentagem barra de progresso (preto): hsl(0, 0%, 8%);
+    Hover e border-bottom header (verde kentucky): hsl(176, 58%, 31%)
+*/
 
 
 /* ----- Fonts ----- */
@@ -28,7 +31,7 @@
 body {
     font-family: 'Lato', sans-serif;
     color: hsl(0, 0%, 8%);
-    background-color: hsl(248, 89%, 93%);
+    background-color: hsl(248, 100%, 97%);
     }
 
 a {
@@ -43,17 +46,17 @@ a {
 .menu-item, 
 .menu-short-icon, 
 .menu-short-item {
-    color: hsl(105, 20%, 96%);
+    color: hsl(0, 0%, 100%);
 }
 
 .menu {
     display: flex;
         align-items: center;
         justify-content: space-between;
-    border-bottom: ridge 5px hsl(176, 54%, 40%);
+    border-bottom: ridge 5px hsl(176, 58%, 31%);
     margin-bottom: 40px;
     height: 70px;
-    background-color: hsl(202, 93%, 30%);
+    background-color: hsl(202, 93%, 22%);
 }
 
 .home {
@@ -82,34 +85,31 @@ a {
 
 .menu-item, 
 .menu-short-icon, 
-.menu-short-item  {
+.menu-short-item {
     font-size: 17px;
 }
 
-.menu-item  {
+.menu-item {
     padding: 23px 15px;
 }
 
-.menu-short-item  {
+.menu-short-item {
     padding: 15px;
 }
 
-.menu-short-icon  {
+.menu-short-icon {
+    display: none;
     padding: 23px;
 }
 
 .menu-item:hover, 
 .menu-short-icon:hover, 
 .menu-short-item:hover {
-    background-color: hsl(176, 54%, 40%);
+    background-color: hsl(176, 58%, 31%);
 }
 
 .menu-item:nth-child(4) {
-    background-color: hsl(176, 54%, 40%);
-}
-
-.menu-short-icon {
-  display: none;
+    background-color: hsl(176, 58%, 31%);
 }
 
 .menu-short-options {
@@ -120,12 +120,12 @@ a {
     display: flex;
         flex-direction: column;
     width: 130px;
-    background-color: hsl(202, 93%, 30%);
-    border: 2px solid hsl(176, 54%, 40%);
+    background-color: hsl(202, 93%, 22%);
+    border: 2px solid hsl(176, 58%, 31%);
 }
 
-.toggle {
-  display: none;
+.menu-short-show {
+    display: none;
 }
 
 /* ---------- Library Vem Aí ---------- */
@@ -138,17 +138,17 @@ a {
 
 .intro-text {
     font-size: 16px;
-    line-height: 2;
+    line-height: 1.5;
     margin-left: 5%;
     margin-right: 5%;
 }
 
 .intro-link {
-    color: hsl(202, 93%, 30%);
+    color: hsl(202, 93%, 22%);
 }
   
 .intro-link:hover {
-color: hsl(28, 100%, 63%);
+    text-decoration: underline;
 }
 
 #books-vem-ai {
@@ -199,8 +199,8 @@ color: hsl(28, 100%, 63%);
     font-family: 'Lato', sans-serif;
     font-size: 14px;
     font-weight: normal;
-    color: hsl(105, 20%, 96%);
-    background-color: hsl(202, 94%, 30%);
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(202, 93%, 22%);
     border: solid 2px hsl(0, 0%, 8%);
     border-radius: 10px;
     cursor: pointer;
@@ -208,9 +208,9 @@ color: hsl(28, 100%, 63%);
 
 .button-more-info:hover, 
 .back-button:hover {
-    color: hsl(202, 94%, 30%);
+    color: hsl(202, 93%, 22%);
     font-weight: bold;
-    background-color: hsl(105, 20%, 96%);
+    background-color: hsl(0, 0%, 100%);
 }
 
 /* ---------- Footer ---------- */
@@ -325,7 +325,11 @@ color: hsl(28, 100%, 63%);
     .home-title {
         font-size: 23px;
     }
-    
+
+    .menu-short-icon {
+        padding: 18px;
+    }
+
     .menu-short-options {
         top: 55px;
         right: 0px;

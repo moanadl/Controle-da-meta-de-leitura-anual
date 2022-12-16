@@ -1,5 +1,6 @@
+const body = document.querySelector('body');
 const menuToggle = document.querySelector('.menu-short-icon');
-const menuToggleItens = document.querySelector('.menu-short-options');
+const menuToggleItems = document.querySelector('.menu-short-options');
 const intro = document.querySelector(".intro");
 const content = document.getElementById("books-vem-ai");
 const backButton = document.querySelector('.back-button');
@@ -493,8 +494,14 @@ const libraryVemAi = [
 ]
 
 // ---------- Show/hide das opções do menu de atalho ao click ---------- //
-menuToggle.addEventListener('click', function() {
-    menuToggleItens.classList.toggle('toggle');
+menuToggle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    console.log('Funciona!')
+    menuToggleItems.classList.toggle('menu-short-show');
+})
+
+body.addEventListener('click', function() {
+    menuToggleItems.classList.add('menu-short-show');
 })
 
 // ---------- Adicionar ao HTML os objetos da constante libraryVemAi ---------- //

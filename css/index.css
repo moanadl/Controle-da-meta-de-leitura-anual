@@ -1,11 +1,14 @@
 /* ----- Colors ----- */
 
-/* --baby-powder: hsl(105, 20%, 96%);
---viridian-green: hsl(176, 54%, 40%);
---sapphire-blue: hsl(202, 93%, 30%);
---deep-saffron: hsl(28, 100%, 63%);
---eerie-black: hsl(0, 0%, 8%); 
-  background-color: hsl(248, 89%, 93%);*/
+/*  
+    Background body (azul claro, quase branco): hsl(248, 89%, 93%);
+    Background header, color links texto, color hover "Saiba mais!" (azul escuro): hsl(202, 93%, 22%);
+    Background índice livros (laranja claro): hsl(28, 100%, 63%);
+    Barra de progresso (verde limão): hsl(120, 76%, 53%);
+    Color header, color "Saiba mais!", background hover "Saiba mais!" (branco): hsl(0, 0%, 100%);
+    Color texto, índice e porcentagem barra de progresso (preto): hsl(0, 0%, 8%);
+    Hover e border-bottom header (verde kentucky): hsl(176, 58%, 31%)
+*/
 
 
 /* ----- Fonts ----- */
@@ -28,7 +31,7 @@
 body {
     color: hsl(0, 0%, 8%);
     font-family: 'Lato', sans-serif;
-    background-color: hsl(248, 89%, 93%);
+    background-color: hsl(248, 100%, 97%);
 }
   
 a {
@@ -43,17 +46,17 @@ a {
 .menu-item, 
 .menu-short-icon, 
 .menu-short-item {
-    color: hsl(105, 20%, 96%);
+    color: hsl(0, 0%, 100%);
 }
 
 .menu {
     display: flex;
         align-items: center;
         justify-content: space-between;
-    border-bottom: ridge 5px hsl(176, 54%, 40%);
+    border-bottom: ridge 5px hsl(176, 58%, 31%);
     margin-bottom: 40px;
     height: 70px;
-    background-color: hsl(202, 93%, 30%);
+    background-color: hsl(202, 93%, 22%);
 }
 
 .home {
@@ -101,7 +104,7 @@ a {
 .menu-item:hover, 
 .menu-short-icon:hover, 
 .menu-short-item:hover {
-    background-color: hsl(176, 54%, 40%);
+    background-color: hsl(176, 58%, 31%);
 }
 
 .menu-short-icon {
@@ -115,8 +118,8 @@ a {
     display: flex;
         flex-direction: column;
     width: 130px;
-    background-color: hsl(202, 93%, 30%);
-    border: 2px solid hsl(176, 54%, 40%);
+    background-color: hsl(202, 93%, 22%);
+    border: 2px solid hsl(176, 58%, 31%);
 }
 
 .menu-short-show {
@@ -227,9 +230,8 @@ a {
         font-size: 23px;
     }
 
-    .menu-short-icon i {
-        position: absolute;
-        right: 25px;
+    .menu-short-icon {
+        padding: 18px;
     }
     
     .menu-short-options {
@@ -270,7 +272,10 @@ a {
 
 @media (max-width: 280px) {
 
-    .welcome-message, .content-description-item, .contact-intro, .contact-link {
+    .welcome-message, 
+    .content-description-item, 
+    .contact-intro, 
+    .contact-link {
         font-size: 13px;
     }
 
@@ -284,23 +289,11 @@ a {
 @media (max-height: 550px) {
 
     .contact {
-        position: static; /* Notar que o position do footer no main é diferente do resto */
+        position: static;
         margin-bottom: 20px;
         margin-left: auto;
         margin-right: auto;
         margin-top: 50px;
-    }
-
-    .contact-link {
-        font-size: 13px;
-    }
-
-    .contact-intro {
-        display: none;
-    }
-
-    .contact.nav {
-        margin-top: 10px;
     }
 
 }

@@ -1,3 +1,4 @@
+const body = document.querySelector('body');
 const menuToggle = document.querySelector('.menu-short-icon');
 const menuToggleItems = document.querySelector('.menu-short-options');
 const intro = document.querySelector(".intro");
@@ -32,7 +33,7 @@ const libraryExtra = [
         autor: 'Arthur Conan Doyle',
         genero: 'Clássico',
         paginas: 224,
-        paginasLidas: 100,
+        paginasLidas: 224,
         status: 'Terminado',
         indice: 2,
         imagem: "../images/extras/baskerville.jpg",
@@ -96,8 +97,13 @@ const libraryExtra = [
 ]
 
 // ---------- Show/hide das opções do menu de atalho ao click ---------- //
-menuToggle.addEventListener('click', function() {
-    menuToggleItems.classList.toggle('toggle');
+menuToggle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    menuToggleItems.classList.toggle('menu-short-show');
+})
+
+body.addEventListener('click', function() {
+    menuToggleItems.classList.add('menu-short-show');
 })
 
 // ---------- Adicionar ao HTML os objetos da constante libraryExtra ---------- //
