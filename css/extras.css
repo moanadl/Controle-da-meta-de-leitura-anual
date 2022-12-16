@@ -137,7 +137,7 @@ a {
 }
 
 .intro-text {
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.5;
     margin-left: 5%;
     margin-right: 5%;
@@ -392,7 +392,8 @@ a {
     }
 
     .intro-text {
-        font-size: 15px;
+        margin-left: 7%;
+        margin-right: 7%;
     }
 
     .contact {
@@ -416,6 +417,10 @@ a {
         font-size: 21px;
     }
 
+    /* .intro-text {
+        font-size: 16px;
+    } */
+
     .more-info-item, 
     .extra-info-item {
         font-size: 14px;
@@ -430,9 +435,9 @@ a {
 
 @media (max-width: 280px) {
 
-    .contact-intro, 
-    .contact-link {
-        font-size: 13px;
+    
+    .intro-text {
+        font-size: 16px;
     }
 
     .contact-link {

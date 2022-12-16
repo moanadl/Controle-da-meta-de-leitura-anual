@@ -133,13 +133,13 @@ a {
     display: flex;
         align-items: center;
         justify-content: center;
-        gap: 6vw;
+        gap: 6%;
     margin: 3% 5%;
 }
 
 .welcome-message {
     margin-top: 15px;
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.5;
 }
 
@@ -150,7 +150,7 @@ a {
 
 .content-description-item {
     margin-top: 7px;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 .image-book {
@@ -240,9 +240,9 @@ a {
     }
 
     .content {
-        margin-top: 3vh;
-        margin-right: 5%;
-        margin-left: 5%;
+        margin-top: 6%;
+        margin-right: 10%;
+        margin-left: 10%;
     }
 
     .contact {
@@ -268,15 +268,21 @@ a {
         font-size: 21px;
     }
 
+    .welcome-message {
+        font-size: 16px;
+    }
+    
+    .content-description-item {
+        font-size: 16px;
+    }
+
 }
 
 @media (max-width: 280px) {
 
     .welcome-message, 
-    .content-description-item, 
-    .contact-intro, 
-    .contact-link {
-        font-size: 13px;
+    .content-description-item {
+        font-size: 15px;
     }
 
     .contact-link {
