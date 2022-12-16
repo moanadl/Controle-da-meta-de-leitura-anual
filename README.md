@@ -9,12 +9,12 @@ Durante o desenvolvimento do site o aprendizado foi imenso e ainda continua. Exi
 
 Algumas das ideias a serem implementadas mais pra frente são:
 
-.Encontrar uma maneira melhor de conectar cada botão de "Saiba mais!" com o livro associado para que não seja necessário usar uma função para adicionar um índice de controle.
-.Colocar o "Saiba mais!" em uma outro HTML e não substituindo o conteúdo das libraries.
-.Colocar um gráfico para acompanhar o progresso da meta.
-.Encontrar uma maneira mais gráfica e didática de apresentar as estatísticas.
-.Adicionar um botão de show/hide e sortby para exibir apenas um tipo de gênero ou para classificar em ordem alfabética ou de leitura, etc.
-...
+- Encontrar uma maneira melhor de conectar cada botão de "Saiba mais!" com o livro associado para que não seja necessário usar uma função para adicionar um índice de controle.
+- Colocar o "Saiba mais!" em uma outro HTML e não substituindo o conteúdo das libraries.
+- Colocar um gráfico para acompanhar o progresso da meta.
+- Encontrar uma maneira mais gráfica e didática de apresentar as estatísticas.
+ - Adicionar um botão de show/hide e sortby para exibir apenas um tipo de gênero ou para classificar em ordem alfabética ou de leitura, etc.
+- ...
 
 # Construção de conhecimento
 
