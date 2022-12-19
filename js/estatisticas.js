@@ -487,7 +487,7 @@ const libraryExtra = [
         ano: 1902,
         modelo: "E-book",
         inicio: '2022-11-22',
-        termino: '2022-12-02', // Fake
+        termino: '2022-12-02',
         progresso: '-',
         tempo: '-',
         citacoes: {
@@ -496,8 +496,28 @@ const libraryExtra = [
             citacao3: '-'
         },
     },
-
-
+    {
+        titulo: 'Um estudo em vermelho',
+        autor: 'Arhtur Conan Doyle',
+        genero: 'Romance policial',
+        paginas: 169,
+        paginasLidas: 169,
+        status: 'Terminado',
+        indice: 3,
+        imagem: "../images/vemAi/estudoEmVermelho.jpg",
+        alt: "Capa do livro Um estudo de vermelho",
+        ano: 1887,
+        modelo: 'E-book',
+        inicio: '2022-12-04',
+        termino: '2022-12-12',
+        progresso: '-',
+        tempo: '-',
+        citacoes: {
+            citacao1: '"Quando um fato parece se opor a uma longa série de deduções, é prova invariável de que pode sustentar alguma outra interpretação."',
+            citacao2: '"O que fazemos nesse mundo é irrelevante. A questão é o que fazemos as pessoas acreditar que fizemos."',
+            citacao3: '-'
+        },
+    },
 ]
 
 // ---------- Show/hide das opções do menu de atalho ao click ---------- //

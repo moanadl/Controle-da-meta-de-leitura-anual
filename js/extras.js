@@ -79,7 +79,7 @@ const libraryExtra = [
         paginas: 90,
         paginasLidas: 35,
         status: 'Em andamento',
-        indice: 18,
+        indice: 4,
         imagem: "../images/vemAi/sonhoNoiteVerao.jpg",
         alt: "Capa do livro Sonho de uma noite de verão",
         ano: 1605,
