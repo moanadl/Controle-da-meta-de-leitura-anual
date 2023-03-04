@@ -508,15 +508,21 @@ body.addEventListener('click', function() {
 function loadLibraryVemAi() {
 
     for (let i in libraryVemAi) {
-        content.innerHTML += '<div class="library">' +
-        '<img class="book-cover" src="' + libraryVemAi[i].imagem + '" alt="' + libraryVemAi[i].alt + '">' +
-        '<div class="book-info">' +
-        '<ul class="book-info-list">' +
-        '<li class="book-title-author">' + '<span class="info-title">Título:</span> ' + libraryVemAi[i].titulo + '</li>' +
-        '<li class="book-title-author">' + '<span class="info-title">Autor:</span> ' + libraryVemAi[i].autor + '</li>' +
-        '</ul>' +
-        '<button class="button-more-info">' + 'Saiba mais!' + '</button>' +
-        '</div>'
+        content.innerHTML += 
+        `<div class="library">
+
+        <img class="book-cover" src="${libraryVemAi[i].imagem}" alt="${libraryVemAi[i].alt}">
+        
+        <div class="book-info">
+        
+        <ul class="book-info-list">
+            <li class="book-title-author"><span class="info-title">Título:</span> ${libraryVemAi[i].titulo}</li>
+            <li class="book-title-author"><span class="info-title">Autor:</span> ${libraryVemAi[i].autor}</li>
+        </ul>
+
+        <button class="button-more-info">Saiba mais!</button>
+
+        </div>`
     }
 
 }
@@ -555,17 +561,19 @@ function loadMoreInfoVemAi () {
     
     // ----- Adicionar informações ao HTML ----- //
     moreInfoContent.innerHTML =
-    '<img class="more-info-cover" src="' + libraryVemAi[bookIndex].imagem + '" alt="' + libraryVemAi[bookIndex].alt + '">' + 
+    `<img class="more-info-cover" src="${libraryVemAi[bookIndex].imagem}" alt="${libraryVemAi[bookIndex].alt}"> 
 
-    '<div class="more-info-book">' +
-        '<ul class="more-info-list">' +
-        '<li class="more-info-item">' + '<span class="info-title">Título:</span> ' + libraryVemAi[bookIndex].titulo + '</li>' +
-        '<li class="more-info-item">' + '<span class="info-title">Autor:</span> ' + libraryVemAi[bookIndex].autor + '</li>' +
-        '<li class="more-info-item">' + '<span class="info-title">Gênero:</span> ' + libraryVemAi[bookIndex].genero + '</li>' +
-        '<li class="more-info-item">' + '<span class="info-title">Páginas:</span> ' + libraryVemAi[bookIndex].paginas + '</li>' +
-        '<li class="more-info-item">' + '<span class="info-title">Ano de Publicação:</span> ' + libraryVemAi[bookIndex].ano + '</li>' +
-        '</ul>' +
-    '</div>'
+    <div class="more-info-book">
+    
+        <ul class="more-info-list">
+            <li class="more-info-item"><span class="info-title">Título:</span> ${libraryVemAi[bookIndex].titulo}</li>
+            <li class="more-info-item"><span class="info-title">Autor:</span> ${libraryVemAi[bookIndex].autor}</li>
+            <li class="more-info-item"><span class="info-title">Gênero:</span> ${libraryVemAi[bookIndex].genero}</li>
+            <li class="more-info-item"><span class="info-title">Páginas:</span> ${libraryVemAi[bookIndex].paginas}</li>
+            <li class="more-info-item"><span class="info-title">Ano de Publicação:</span> ${libraryVemAi[bookIndex].ano}</li>
+        </ul>
+
+    </div>`
 
     backButton.onclick = reloadLibraryVemAi;
 }

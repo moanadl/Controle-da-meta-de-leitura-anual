@@ -462,19 +462,26 @@ body.addEventListener('click', function() {
 function loadLibrary2022() {
 
     for (let i in library2022) {
-        content.innerHTML += '<div class="library">' +
-        '<div class="book">' +
-        '<p class="book-index">' + '#' + library2022[i].indice + '</p>' +
-        '<img class="book-cover" src="' + library2022[i].imagem + '" alt="' + library2022[i].alt + '">' + 
-        '</div>' +
-        '<div class="book-info">' +
-        '<ul class="book-info-list">' +
-        '<li class="book-title-author">' + '<span class="info-title">Título:</span> ' + library2022[i].titulo + '</li>' +
-        '<li class="book-title-author">' + '<span class="info-title">Autor:</span> ' + library2022[i].autor + '</li>' +
-        '</ul>' +
-        '</div>' +
-        '<button class="button-more-info">' + 'Saiba mais!' + '</button>' +
-        '</div>'
+        content.innerHTML += 
+        `<div class="library">
+
+            <div class="book">
+                <p class="book-index">#${library2022[i].indice}</p>
+                <img class="book-cover" src="${library2022[i].imagem}" alt="${library2022[i].alt}"> 
+            </div>
+
+            <div class="book-info">
+
+                <ul class="book-info-list">
+                    <li class="book-title-author"><span class="info-title">Título:</span> ${library2022[i].titulo}</li>
+                    <li class="book-title-author"><span class="info-title">Autor:</span> ${library2022[i].autor}</li>
+                </ul>
+
+            </div>
+
+            <button class="button-more-info">Saiba mais!</button>
+
+        </div>`
     }
 
 }
@@ -526,40 +533,49 @@ function loadMoreInfo2022 () {
 
     // ----- Adicionar informações ao HTML ----- //
     moreInfoContent.innerHTML =
-    '<img class="more-info-cover" src="' + library2022[bookIndex].imagem + '" alt="' + library2022[bookIndex].alt + '">' + 
+    `<img class="more-info-cover" src="${library2022[bookIndex].imagem}" alt="${library2022[bookIndex].alt}"> 
 
-    '<div class="more-info-book">' +
-        '<ul class="more-info-list">' +
-        '<li class="more-info-item">' + '<span class="info-title">Título:</span> ' + library2022[bookIndex].titulo + '</li>' +
-        '<li class="more-info-item">' + '<span class="info-title">Autor:</span> ' + library2022[bookIndex].autor + '</li>' +
-        '<li class="more-info-item">' + '<span class="info-title">Gênero:</span> ' + library2022[bookIndex].genero + '</li>' +
-        '<li class="more-info-item">' + '<span class="info-title">Páginas:</span> ' + library2022[bookIndex].paginas + '</li>' +
-        '<li class="more-info-item">' + '<span class="info-title">Ano de Publicação:</span> ' + library2022[bookIndex].ano + '</li>' +
-        '<li class="more-info-item">' + '<span class="info-title">Modelo:</span> ' + library2022[bookIndex].modelo + '</li>' +
-        '<li class="more-info-item">' + '<span class="info-title">Início da leitura:</span> ' + library2022[bookIndex].inicio.split('-').reverse().join('/') + '</li>' +
-        '<li class="more-info-item">' + '<span class="info-title">Término da leitura:</span> ' + library2022[bookIndex].termino.split('-').reverse().join('/') + '</li>' +
-        '</ul>' +
-    '</div>' +
+    <div class="more-info-book">
 
-    '<div class="extra-info">' + 
+        <ul class="more-info-list">
+            <li class="more-info-item"><span class="info-title">Título:</span> ${library2022[bookIndex].titulo}</li>
+            <li class="more-info-item"><span class="info-title">Autor:</span> ${library2022[bookIndex].autor}</li>
+            <li class="more-info-item"><span class="info-title">Gênero:</span> ${library2022[bookIndex].genero}</li>
+            <li class="more-info-item"><span class="info-title">Páginas:</span> ${library2022[bookIndex].paginas}</li>
+            <li class="more-info-item"><span class="info-title">Ano de Publicação:</span> ${library2022[bookIndex].ano}</li>
+            <li class="more-info-item"><span class="info-title">Modelo:</span> ${library2022[bookIndex].modelo}</li>
+            <li class="more-info-item"><span class="info-title">Início da leitura:</span> ${library2022[bookIndex].inicio.split('-').reverse().join('/')}</li>
+            <li class="more-info-item"><span class="info-title">Término da leitura:</span> ${library2022[bookIndex].termino.split('-').reverse().join('/')}</li>
+        </ul>
 
-        '<div class="progress">' +
-            '<p class="extra-info-item">' + '<span class="info-title">Progresso:</span>' + '</p>' + 
-            '<div class="progress-bar-background">' + 
-                '<div class="progress-bar-status"><p class="progress-percentage">' + progress + '%</p></div>' + 
-            '</div>' +
-        '</div>' + 
+    </div>
 
-        '<p class="extra-info-item">' + '<span class="info-title">Tempo de leitura:</span> ' + time + ' </p>' +
-        '<p class="extra-info-item">' + '<span class="info-title">Citações preferidas:</span>' + '</p>' + 
-        '<blockquote class="cite1">' +  library2022[bookIndex].citacoes.citacao1 + '</blockquote>' +
-        '<details class="extra-citation">' + 
-            '<summary class="see-more-citation">' + 'Veja mais...' + '</summary>' +
-            '<blockquote class="cite2">' + library2022[bookIndex].citacoes.citacao2 + '</blockquote>' +
-            '<blockquote class="cite3">' + library2022[bookIndex].citacoes.citacao3 + '</blockquote>' +
-        '</details>' +
+    <div class="extra-info"> 
 
-    '</div>'
+        <div class="progress">
+            <p class="extra-info-item"><span class="info-title">Progresso:</span></p>
+
+            <div class="progress-bar-background"> 
+
+                <div class="progress-bar-status"><p class="progress-percentage">${progress}%</p></div> 
+
+            </div>
+
+        </div>
+
+        <p class="extra-info-item"><span class="info-title">Tempo de leitura:</span> ${time}</p>
+        <p class="extra-info-item"><span class="info-title">Citações preferidas:</span></p> 
+        <blockquote class="cite1">${library2022[bookIndex].citacoes.citacao1}</blockquote>
+
+        <details class="extra-citation"> 
+
+                <summary class="see-more-citation">Veja mais...</summary>
+                <blockquote class="cite2">${library2022[bookIndex].citacoes.citacao2}</blockquote>
+                <blockquote class="cite3">${library2022[bookIndex].citacoes.citacao3}</blockquote>
+
+        </details>
+
+    </div>`
 
     // ----- Condicional da quantidade de citações (máx. 3) ----- //
     const extraCitation = document.querySelector('.extra-citation');
