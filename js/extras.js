@@ -124,7 +124,7 @@ function loadLibraryExtra () {
 
             </div>
 
-        <button class="button-more-info">Saiba mais!</button>
+        <button class="button-more-info ${i}">Saiba mais!</button>
 
         </div>`
     }
@@ -136,20 +136,7 @@ loadLibraryExtra ();
 // ---------- Adicionar um índice de controle em cada botão de "Saiba mais!" ---------- //
 const buttonMoreInfo = Array.from(document.querySelectorAll('.button-more-info'));
 
-function clickMoreInfo () {
-
-    buttonMoreInfo.forEach (e => {
-
-        for (let i = 0; i <buttonMoreInfo.length; i++) {
-            buttonMoreInfo[i].classList.add(`${i}`);
-        }
-
-        e.onclick = loadMoreInfoExtra;
-        
-    })
-}
-
-clickMoreInfo();
+buttonMoreInfo.forEach (e => e.onclick = loadMoreInfoExtra);
 
 // ---------- Substituir as informações da library2022 pelas informações do "Saiba mais!" do livro selecionado ---------- //
 function loadMoreInfoExtra () {

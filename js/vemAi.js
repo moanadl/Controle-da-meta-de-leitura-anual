@@ -520,7 +520,7 @@ function loadLibraryVemAi() {
             <li class="book-title-author"><span class="info-title">Autor:</span> ${libraryVemAi[i].autor}</li>
         </ul>
 
-        <button class="button-more-info">Saiba mais!</button>
+        <button class="button-more-info ${i}">Saiba mais!</button>
 
         </div>`
     }
@@ -532,20 +532,7 @@ loadLibraryVemAi();
 // ---------- Adicionar um índice de controle em cada botão de "Saiba mais!" ---------- //
 const buttonMoreInfo = Array.from(document.querySelectorAll('.button-more-info'));
 
-function clickMoreInfo () {
-
-    buttonMoreInfo.forEach (e => {
-
-        for (let i = 0; i <buttonMoreInfo.length; i++) {
-            buttonMoreInfo[i].classList.add(`${i}`);
-        }
-
-        e.onclick = loadMoreInfoVemAi;
-        
-    })
-}
-
-clickMoreInfo();
+buttonMoreInfo.forEach (e => e.onclick = loadMoreInfoVemAi);
 
 // ---------- Substituir as informações da libraryVemAi pelas informações do "Saiba mais!" do livro selecionado ---------- //
 function loadMoreInfoVemAi () {
